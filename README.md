@@ -1,6 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 react tooltiip is used
 npm install react-tooltip
+
+hosted site
+https://erasedbeyond.github.io/tooltip-test/
 
 ## Available Scripts
 
