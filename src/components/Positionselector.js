@@ -2,6 +2,9 @@ import React from 'react';
 
 class PositionSelector extends React.Component {
 
+    componentDidMount(){
+        document.getElementById('top').style.backgroundColor = 'red';
+    }
 
     render(){
         return (
