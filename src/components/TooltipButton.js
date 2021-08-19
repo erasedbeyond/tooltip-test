@@ -9,20 +9,25 @@ class TooltipButton extends React.Component {
         let tooltip= document.getElementById("tooltip-conatiner")
         console.log("posi update: ", posi)
         if(posi==='top'){
-            tooltip.style.top="70px"
-            tooltip.style.left="180px"
+            tooltip.style.top="-40px"
+            tooltip.style.left="-50px"
+
+
 
         }else if(posi==='bottom'){
-            tooltip.style.top="170px"
-            tooltip.style.left="180px"
+            tooltip.style.top="55px"
+            tooltip.style.left="-50px"
+       
+
 
         }else if(posi==='right'){
-            tooltip.style.top="120px"
-            tooltip.style.left="350px"
+            tooltip.style.top="10px"
+            tooltip.style.left="105px"
+
 
         }else  if(posi==='left'){
-            tooltip.style.top="120px"
-            tooltip.style.left="30px"
+            tooltip.style.top="10px"
+            tooltip.style.left="-230px"
 
         }
         
@@ -30,8 +35,10 @@ class TooltipButton extends React.Component {
 
     componentDidMount(){
         let tooltip= document.getElementById("tooltip-conatiner")
-        tooltip.style.top="70px"
-        tooltip.style.left="180px"
+        tooltip.style.top="-40px"
+        tooltip.style.left="-50px"
+
+
         tooltip.style.display="none"
         let showtip= document.getElementById("show-tip")
         showtip.onmouseover = function(){
@@ -70,10 +77,16 @@ class TooltipButton extends React.Component {
             },
             tooltip:{
                 position:'absolute',
+                width:'210px',
+                height:'20px',
+                textAlign:'center',
+
                 backgroundColor:'white',
                 padding:"5px",
                 border:"1px solid black",
-                top:'0'
+            },
+            tooltipOuter:{
+                position:'relative',
             }
         }
         const posi=this.props.position;
@@ -81,13 +94,14 @@ class TooltipButton extends React.Component {
 
             <div style={styles.buttonDiv} className="TooltipButton ">
 
-                <button style={styles.button}  id='show-tip'>
-                    Tooltip
-                </button>
+                <div style={styles.tooltipOuter} id="tooltip-outer">
+                    <button style={styles.button}  id='show-tip'>
+                        Tooltip
+                    </button>
 
-                <div style={styles.tooltip} id="tooltip-conatiner">
-                    this is a tooltip shown at {posi}
-                    
+                    <div style={styles.tooltip} id="tooltip-conatiner">
+                        this is a tooltip shown at {posi}
+                    </div>
                 </div>
 
             </div>
