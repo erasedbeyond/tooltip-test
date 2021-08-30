@@ -1,7 +1,7 @@
 {
   "name": "tool-tip",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "http://erasedbeyond.github.io/tooltip",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
